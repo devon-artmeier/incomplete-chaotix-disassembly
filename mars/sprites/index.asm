@@ -2,6 +2,7 @@
 ; 32X Sprite Index
 ; -------------------------------------------------------------------------
 
+MarsSpriteIndex:
 	dc.l	MarsSpr_000
 	dc.l	MarsSpr_001
 	dc.l	MarsSpr_002
