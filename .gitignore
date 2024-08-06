@@ -1,7 +1,9 @@
 *.32x
-*.lst
 *.id0
 *.id1
+*.lst
 *.nam
+*.p
 *.til
 mars/pwm_driver.bin
+sound/z80/driver.bin
