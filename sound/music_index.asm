@@ -1,0 +1,47 @@
+; -------------------------------------------------------------------------
+; Music index
+; -------------------------------------------------------------------------
+
+	DEFINE_SONG SoundBank0+$0000
+	DEFINE_SONG SoundBank0+$0D61
+	DEFINE_SONG SoundBank0+$1904
+	DEFINE_SONG SoundBank0+$28A6
+	DEFINE_SONG SoundBank0+$349A
+	DEFINE_SONG SoundBank0+$4220
+	DEFINE_SONG SoundBank0+$509C
+	DEFINE_SONG SoundBank0+$536B
+	DEFINE_SONG SoundBank0+$5DEE
+	DEFINE_SONG SoundBank0+$61BE
+	DEFINE_SONG SoundBank0+$68E5
+	DEFINE_SONG SoundBank0+$6FE8
+	DEFINE_SONG SoundBank0+$74E3
+	DEFINE_SONG SoundBank0+$77F0
+	DEFINE_SONG SoundBank1+$0000
+	DEFINE_SONG SoundBank1+$036A
+	DEFINE_SONG SoundBank1+$0A39
+	DEFINE_SONG SoundBank1+$0C96
+	DEFINE_SONG SoundBank1+$115D
+	DEFINE_SONG SoundBank1+$151D
+	DEFINE_SONG SoundBank1+$1FB0
+	DEFINE_SONG SoundBank1+$258C
+	DEFINE_SONG SoundBank1+$2C3C
+	DEFINE_SONG SoundBank1+$3082
+	DEFINE_SONG SoundBank1+$36F5
+	DEFINE_SONG SoundBank1+$3BFF
+	DEFINE_SONG SoundBank1+$444E
+	DEFINE_SONG SoundBank1+$48FA
+	DEFINE_SONG SoundBank1+$4D0D
+	DEFINE_SONG SoundBank1+$50EF
+	DEFINE_SONG SoundBank1+$534C
+	DEFINE_SONG SoundBank1+$553F
+	DEFINE_SONG SoundBank1+$567A
+	DEFINE_SONG SoundBank1+$581D
+	DEFINE_SONG SoundBank1+$59F4
+	DEFINE_SONG SoundBank1+$5C41
+	DEFINE_SONG SoundBank1+$633D
+	DEFINE_SONG SoundBank2+$0000
+	DEFINE_SONG SoundBank2+$09AC
+	DEFINE_SONG SoundBank2+$0C6A
+	DEFINE_SONG SoundBank2+$400B
+	
+; -------------------------------------------------------------------------
