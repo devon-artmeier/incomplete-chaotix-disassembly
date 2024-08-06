@@ -115,7 +115,7 @@ SFX_PRIORITIES macro cutoff
 	Z80_ADDR MusicBanks
 
 ; -------------------------------------------------------------------------
-; Music and SFX indices
+; Music and SFX index tables
 ; -------------------------------------------------------------------------
 
 	include	"sound/music_index.asm"

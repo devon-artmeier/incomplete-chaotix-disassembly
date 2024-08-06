@@ -190,7 +190,7 @@ VBlankInt:
 ; -------------------------------------------------------------------------
 
 InitDriver:
-	ld	sp,2000h					; Set stack pointer
+	ld	sp,Z80_END					; Set stack pointer
 
 	ld	c,(10000h)&0FFFFh				; Delay for a while
 
