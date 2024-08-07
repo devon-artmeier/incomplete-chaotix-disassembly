@@ -363,8 +363,6 @@ smpsHeaderChanSFX macro chan
 smpsHeaderSFXChannel macro chanid,loc,pitch,vol
 	if (\chanid)=cFM3
 		inform 3,"Using channel ID of cFM3 ($04) in Chaotix driver is unsupported. Change it to another channel."
-	elseif (\chanid)=cFM6
-		inform 3,"Using channel ID of cFM6 ($06) in Chaotix driver is unsupported. Change it to another channel."
 	elseif (\chanid)=cPSG1
 		inform 3,"Using channel ID of cPSG1 ($80) in Chaotix driver is unsupported. Change it to another channel."
 	elseif (\chanid)=cNoise
@@ -373,7 +371,7 @@ smpsHeaderSFXChannel macro chanid,loc,pitch,vol
 	dc.b	$80, \chanid
 	dc.b	(\loc)&$FF, (((\loc)>>8)&$7F)|$80
 	if ((\chanid)&$80)<>0
-		PSGPitchConvert pitch
+		PSGPitchConvert \pitch
 	else
 		dc.b	\pitch
 	endif

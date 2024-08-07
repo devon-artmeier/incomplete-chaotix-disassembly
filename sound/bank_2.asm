@@ -12,142 +12,142 @@ Mus_Decision2nd:
 	include	"sound/music/decision_2nd.asm"
 	align	$2000,$FF
 Sfx_Id2A:
-	incbin	"sound/sfx/2A.bin"
+	include	"sound/sfx/2A.asm"
 Sfx_Id2B:
-	incbin	"sound/sfx/2B.bin"
+	include	"sound/sfx/2B.asm"
 Sfx_Id2C:
-	incbin	"sound/sfx/2C.bin"
+	include	"sound/sfx/2C.asm"
 Sfx_Id2D:
-	incbin	"sound/sfx/2D.bin"
+	include	"sound/sfx/2D.asm"
 Sfx_Id2E:
-	incbin	"sound/sfx/2E.bin"
+	include	"sound/sfx/2E.asm"
 Sfx_Id2F:
-	incbin	"sound/sfx/2F.bin"
+	include	"sound/sfx/2F.asm"
 Sfx_Id30:
-	incbin	"sound/sfx/30.bin"
+	include	"sound/sfx/30.asm"
 Sfx_Id31:
-	incbin	"sound/sfx/31.bin"
+	include	"sound/sfx/31.asm"
 Sfx_Id32:
-	incbin	"sound/sfx/32.bin"
+	include	"sound/sfx/32.asm"
 Sfx_Id33:
-	incbin	"sound/sfx/33.bin"
+	include	"sound/sfx/33.asm"
 Sfx_Id34:
-	incbin	"sound/sfx/34.bin"
+	include	"sound/sfx/34.asm"
 Sfx_Id35:
-	incbin	"sound/sfx/35.bin"
+	include	"sound/sfx/35.asm"
 Sfx_Id36:
-	incbin	"sound/sfx/36.bin"
+	include	"sound/sfx/36.asm"
 Sfx_Id37:
-	incbin	"sound/sfx/37.bin"
+	include	"sound/sfx/37.asm"
 Sfx_Id38:
-	incbin	"sound/sfx/38.bin"
+	include	"sound/sfx/38.asm"
 Sfx_Id39:
-	incbin	"sound/sfx/39.bin"
+	include	"sound/sfx/39.asm"
 Sfx_Id3A:
-	incbin	"sound/sfx/3A.bin"
+	include	"sound/sfx/3A.asm"
 Sfx_Id3B:
-	incbin	"sound/sfx/3B.bin"
+	include	"sound/sfx/3B.asm"
 Sfx_Id3C:
-	incbin	"sound/sfx/3C.bin"
+	include	"sound/sfx/3C.asm"
 Sfx_Id3D:
-	incbin	"sound/sfx/3D.bin"
+	include	"sound/sfx/3D.asm"
 Sfx_Id3E:
-	incbin	"sound/sfx/3E.bin"
+	include	"sound/sfx/3E.asm"
 Sfx_Id3F:
-	incbin	"sound/sfx/3F.bin"
+	include	"sound/sfx/3F.asm"
 Sfx_Id40:
-	incbin	"sound/sfx/40.bin"
+	include	"sound/sfx/40.asm"
 Sfx_Id41:
-	incbin	"sound/sfx/41.bin"
+	include	"sound/sfx/41.asm"
 Sfx_Id42:
-	incbin	"sound/sfx/42.bin"
+	include	"sound/sfx/42.asm"
 Sfx_Id43:
-	incbin	"sound/sfx/43.bin"
+	include	"sound/sfx/43.asm"
 Sfx_Id44:
-	incbin	"sound/sfx/44.bin"
+	include	"sound/sfx/44.asm"
 Sfx_Id45:
-	incbin	"sound/sfx/45.bin"
+	include	"sound/sfx/45.asm"
 Sfx_Id46:
-	incbin	"sound/sfx/46.bin"
+	include	"sound/sfx/46.asm"
 Sfx_Id47:
-	incbin	"sound/sfx/47.bin"
+	include	"sound/sfx/47.asm"
 Sfx_Id48:
-	incbin	"sound/sfx/48.bin"
+	include	"sound/sfx/48.asm"
 Sfx_Id49:
-	incbin	"sound/sfx/49.bin"
+	include	"sound/sfx/49.asm"
 Sfx_Id4A:
-	incbin	"sound/sfx/4A.bin"
+	include	"sound/sfx/4A.asm"
 Sfx_Id4B:
-	incbin	"sound/sfx/4B.bin"
+	include	"sound/sfx/4B.asm"
 Sfx_Id4C:
-	incbin	"sound/sfx/4C.bin"
+	include	"sound/sfx/4C.asm"
 Sfx_Id4D:
-	incbin	"sound/sfx/4D.bin"
+	include	"sound/sfx/4D.asm"
 Sfx_Id4E:
-	incbin	"sound/sfx/4E.bin"
+	include	"sound/sfx/4E.asm"
 Sfx_Id4F:
-	incbin	"sound/sfx/4F.bin"
+	include	"sound/sfx/4F.asm"
 Sfx_Id50:
-	incbin	"sound/sfx/50.bin"
+	include	"sound/sfx/50.asm"
 Sfx_Id51:
-	incbin	"sound/sfx/51.bin"
+	include	"sound/sfx/51.asm"
 Sfx_Id52:
-	incbin	"sound/sfx/52.bin"
+	include	"sound/sfx/52.asm"
 Sfx_Id53:
-	incbin	"sound/sfx/53.bin"
+	include	"sound/sfx/53.asm"
 Sfx_Id54:
-	incbin	"sound/sfx/54.bin"
+	include	"sound/sfx/54.asm"
 Sfx_Id55:
-	incbin	"sound/sfx/55.bin"
+	include	"sound/sfx/55.asm"
 Sfx_Id56:
-	incbin	"sound/sfx/56.bin"
+	include	"sound/sfx/56.asm"
 Sfx_Id57:
-	incbin	"sound/sfx/57.bin"
+	include	"sound/sfx/57.asm"
 Sfx_Id58:
-	incbin	"sound/sfx/58.bin"
+	include	"sound/sfx/58.asm"
 Sfx_Id59:
-	incbin	"sound/sfx/59.bin"
+	include	"sound/sfx/59.asm"
 Sfx_Id5A:
-	incbin	"sound/sfx/5A.bin"
+	include	"sound/sfx/5A.asm"
 Sfx_Id5B:
-	incbin	"sound/sfx/5B.bin"
+	include	"sound/sfx/5B.asm"
 Sfx_Id5C:
-	incbin	"sound/sfx/5C.bin"
+	include	"sound/sfx/5C.asm"
 Sfx_Id5D:
-	incbin	"sound/sfx/5D.bin"
+	include	"sound/sfx/5D.asm"
 Sfx_Id5E:
-	incbin	"sound/sfx/5E.bin"
+	include	"sound/sfx/5E.asm"
 Sfx_Id5F:
-	incbin	"sound/sfx/5F.bin"
+	include	"sound/sfx/5F.asm"
 Sfx_Id60:
-	incbin	"sound/sfx/60.bin"
+	include	"sound/sfx/60.asm"
 Sfx_Id61:
-	incbin	"sound/sfx/61.bin"
+	include	"sound/sfx/61.asm"
 Sfx_Id62:
-	incbin	"sound/sfx/62.bin"
+	include	"sound/sfx/62.asm"
 Sfx_Id63:
-	incbin	"sound/sfx/63.bin"
+	include	"sound/sfx/63.asm"
 Sfx_Id64:
-	incbin	"sound/sfx/64.bin"
+	include	"sound/sfx/64.asm"
 Sfx_Id65:
-	incbin	"sound/sfx/65.bin"
+	include	"sound/sfx/65.asm"
 Sfx_Id66:
-	incbin	"sound/sfx/66.bin"
+	include	"sound/sfx/66.asm"
 Sfx_Id67:
-	incbin	"sound/sfx/67.bin"
+	include	"sound/sfx/67.asm"
 Sfx_Id68:
-	incbin	"sound/sfx/68.bin"
+	include	"sound/sfx/68.asm"
 Sfx_Id69:
-	incbin	"sound/sfx/69.bin"
+	include	"sound/sfx/69.asm"
 Sfx_Id6A:
-	incbin	"sound/sfx/6A.bin"
+	include	"sound/sfx/6A.asm"
 Sfx_Id6B:
-	incbin	"sound/sfx/6B.bin"
+	include	"sound/sfx/6B.asm"
 Sfx_Id6C:
-	incbin	"sound/sfx/6C.bin"
+	include	"sound/sfx/6C.asm"
 Sfx_Id6D:
-	incbin	"sound/sfx/6D.bin"
+	include	"sound/sfx/6D.asm"
 Sfx_Id6E:
-	incbin	"sound/sfx/6E.bin"
+	include	"sound/sfx/6E.asm"
 
 ; -------------------------------------------------------------------------
