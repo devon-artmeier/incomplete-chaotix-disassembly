@@ -3,32 +3,32 @@
 ; -------------------------------------------------------------------------
 
 Mus_DoorIntoSummer:
-	incbin	"sound/music/door_into_summer.bin"
+	include	"sound/music/door_into_summer.asm"
 Mus_Electoria:
-	incbin	"sound/music/electoria.bin"
+	include	"sound/music/electoria.asm"
 Mus_SpeedOfSound:
-	incbin	"sound/music/speed_of_sound.bin"
+	include	"sound/music/speed_of_sound.asm"
 Mus_Seascape:
-	incbin	"sound/music/seascape.bin"
+	include	"sound/music/seascape.asm"
 Mus_MidnightGreenhouse:
-	incbin	"sound/music/midnight_greenhouse.bin"
+	include	"sound/music/midnight_greenhouse.asm"
 Mus_NewMoon:
-	incbin	"sound/music/new_moon.bin"
+	include	"sound/music/new_moon.asm"
 Mus_Labyrinth:
-	incbin	"sound/music/labyrinth.bin"
+	include	"sound/music/labyrinth.asm"
 Mus_TrialAndError:
-	incbin	"sound/music/trial_and_error.bin"
+	include	"sound/music/trial_and_error.asm"
 Mus_Walkin:
-	incbin	"sound/music/walkin.bin"
+	include	"sound/music/walkin.asm"
 Mus_HyperHyper:
-	incbin	"sound/music/hyper_hyper.bin"
+	include	"sound/music/hyper_hyper.asm"
 Mus_EveningStar:
-	incbin	"sound/music/evening_star.bin"
+	include	"sound/music/evening_star.asm"
 Mus_Moonrise:
-	incbin	"sound/music/moonrise.bin"
+	include	"sound/music/moonrise.asm"
 Mus_Overture:
-	incbin	"sound/music/overture.bin"
+	include	"sound/music/overture.asm"
 Mus_ThisHorizon:
-	incbin	"sound/music/this_horizon.bin"
+	include	"sound/music/this_horizon.asm"
 	
 ; -------------------------------------------------------------------------

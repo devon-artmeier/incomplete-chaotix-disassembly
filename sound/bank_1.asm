@@ -3,50 +3,50 @@
 ; -------------------------------------------------------------------------
 
 Mus_TakeOff:
-	incbin	"sound/music/take_off.bin"
+	include	"sound/music/take_off.asm"
 Mus_Combination:
-	incbin	"sound/music/combination.bin"
+	include	"sound/music/combination.asm"
 Mus_TakeANap:
-	incbin	"sound/music/take_a_nap.bin"
+	include	"sound/music/take_a_nap.asm"
 Mus_SurgingPower:
-	incbin	"sound/music/surging_power.bin"
+	include	"sound/music/surging_power.asm"
 Mus_MechanicalDance:
-	incbin	"sound/music/mechanical_dance.bin"
+	include	"sound/music/mechanical_dance.asm"
 Mus_TubePanic:
-	incbin	"sound/music/tube_panic.bin"
+	include	"sound/music/tube_panic.asm"
 Mus_CrystalNightmare:
-	incbin	"sound/music/crystal_nightmare.bin"
+	include	"sound/music/crystal_nightmare.asm"
 Mus_ChildsSong:
-	incbin	"sound/music/childs_song.bin"
+	include	"sound/music/childs_song.asm"
 Mus_SodaPop:
-	incbin	"sound/music/soda_pop.bin"
+	include	"sound/music/soda_pop.asm"
 Mus_Pendulum:
-	incbin	"sound/music/pendulum.bin"
+	include	"sound/music/pendulum.asm"
 Mus_SilverScreen:
-	incbin	"sound/music/silver_screen.bin"
+	include	"sound/music/silver_screen.asm"
 Mus_TachyTouch:
-	incbin	"sound/music/tachy_touch.bin"
+	include	"sound/music/tachy_touch.asm"
 Mus_ChaoticWorld:
-	incbin	"sound/music/chaotic_world.bin"
+	include	"sound/music/chaotic_world.asm"
 Mus_Surprise:
-	incbin	"sound/music/surprise.bin"
+	include	"sound/music/surprise.asm"
 Mus_NiceMeetingYou:
-	incbin	"sound/music/nice_meeting_you.bin"
+	include	"sound/music/nice_meeting_you.asm"
 Mus_HaveAHappyDay:
-	incbin	"sound/music/have_a_happy_day.bin"
+	include	"sound/music/have_a_happy_day.asm"
 Mus_ReachTheGoal:
-	incbin	"sound/music/reach_the_goal.bin"
+	include	"sound/music/reach_the_goal.asm"
 Mus_HighFive:
-	incbin	"sound/music/high_five.bin"
+	include	"sound/music/high_five.asm"
 Mus_Decision:
-	incbin	"sound/music/decision.bin"
+	include	"sound/music/decision.asm"
 Mus_FromPartyToParty:
-	incbin	"sound/music/from_party_to_party.bin"
+	include	"sound/music/from_party_to_party.asm"
 Mus_HaveSomeFun:
-	incbin	"sound/music/have_some_fun.bin"
+	include	"sound/music/have_some_fun.asm"
 Mus_OrientalLegend:
-	incbin	"sound/music/oriental_legend.bin"
+	include	"sound/music/oriental_legend.asm"
 Mus_SteelHeart:
-	incbin	"sound/music/steel_heart.bin"
+	include	"sound/music/steel_heart.asm"
 
 ; -------------------------------------------------------------------------

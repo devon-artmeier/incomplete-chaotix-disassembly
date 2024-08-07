@@ -3,13 +3,13 @@
 ; -------------------------------------------------------------------------
 
 Mus_Tribute:
-	incbin	"sound/music/tribute.bin"
+	include	"sound/music/tribute.asm"
 Mus_DestructivePower:
-	incbin	"sound/music/destructive_power.bin"
+	include	"sound/music/destructive_power.asm"
 Mus_JustAnotherDay:
-	incbin	"sound/music/just_another_day.bin"
+	include	"sound/music/just_another_day.asm"
 Mus_Decision2nd:
-	incbin	"sound/music/decision_2nd.bin"
+	include	"sound/music/decision_2nd.asm"
 	align	$2000,$FF
 Sfx_Id2A:
 	incbin	"sound/sfx/2A.bin"
