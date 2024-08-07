@@ -762,8 +762,8 @@ UpdateFmPanEnvelope:
 ; FM pan envelopes
 ; -------------------------------------------------------------------------
 
-FmPanEnvelopes: 
-	dw	FmPanEnv_00           
+FmPanEnvelopes:
+	dw	FmPanEnv_00
 	dw	FmPanEnv_01
 	dw	FmPanEnv_02
 	dw	FmPanEnv_03
@@ -803,7 +803,7 @@ UpdateVolumeEnvelope:
 
 .SetRegisters:
 	push	af						; Should this operator be affected?
-	sra     c
+	sra	c
 	push	bc
 	jr	nc,.SkipRegister				; If not, branch
 	
@@ -1031,7 +1031,7 @@ UpdatePortamento:
 	
 	or	a						; Has the frequency underflown?
 	ld	hl,283h
-	sbc     hl,bc
+	sbc	hl,bc
 	jr	c,.CheckOverflow				; If not, branch
 	
 	ld	hl,-57Bh					; Move down an octabe
@@ -1041,7 +1041,7 @@ UpdatePortamento:
 .CheckOverflow:
 	or	a						; Has the frequency overflown?
 	ld	hl,508h
-	sbc     hl,bc
+	sbc	hl,bc
 	jr	nc,.GotFrequency				; If not, branch
 	
 	ld	hl,57Ch						; Move up an octave
@@ -1204,7 +1204,7 @@ PlayMusic:
 	ld	hl,(z_external_data+zdata.music_banks)
 	add	a,l
 	ld	l,a
-	adc     a,h
+	adc	a,h
 	sub	l
 	ld	h,a
 	ld	a,(hl)
@@ -1573,7 +1573,7 @@ InitTrack2:
 ; -------------------------------------------------------------------------
 
 SfxTracks:
-	dw	z_sfx_fm4            
+	dw	z_sfx_fm4
 	dw	z_sfx_fm4
 	dw	z_sfx_fm5
 	dw	z_sfx_fm6
@@ -1587,7 +1587,7 @@ SfxTracks:
 ; -------------------------------------------------------------------------
 
 SfxMusicTracks:
-	dw	z_music_fm4          
+	dw	z_music_fm4
 	dw	z_music_fm4
 	dw	z_music_fm5
 	dw	z_music_fm6
@@ -1669,7 +1669,7 @@ UpdatePause:
 ; Fade sound out
 ; -------------------------------------------------------------------------
 
-FadeOutSound:	         
+FadeOutSound:
 	ld	a,28h						; Set fade timer
 	ld	(z_fade_timer),a
 	ld	a,6						; Set fade delay
@@ -1915,7 +1915,7 @@ ProcessSoundQueue:
 	ld	hl,(z_external_data+zdata.priorities)		; Get sound priority
 	add	a,l
 	ld	l,a
-	adc     a,h
+	adc	a,h
 	sub	l
 	ld	h,a
 	
@@ -2024,7 +2024,7 @@ RunTrackCommand2:
 	ld	a,(de)						; Get first parameter
 	jp	(hl)						; Run command
 	
-TrackCommandFinished:	            
+TrackCommandFinished:
 	inc	de						; Process next set of track data
 	jp	ProcessNextTrackData
 
@@ -2065,7 +2065,7 @@ TrackCommands:
 	dw	TrackCmd_ExtendedCmd
 	
 ExtendedTrackCmds:
-	dw	TrackCmd_Tempo   
+	dw	TrackCmd_Tempo
 	dw	TrackCmd_PlaySound
 	dw	TrackCmd_PauseMusic
 	dw	TrackCmd_CopyData
@@ -2073,12 +2073,11 @@ ExtendedTrackCmds:
 	dw	TrackCmd_FmSsgEg
 	dw	TrackCmd_FmVolumeEnvelope
 
-
 ; -------------------------------------------------------------------------
 ; Null track command
 ; -------------------------------------------------------------------------
 
-TrackCmd_Null:	        
+TrackCmd_Null:
 	dec	de
 	ret
 
@@ -2109,7 +2108,7 @@ SetFmPanAmsFmsRegister:
 ; Set AMS/FMS
 ; -------------------------------------------------------------------------
 
-TrackCmd_FmAmsFms:	    
+TrackCmd_FmAmsFms:
 	ld	c,a						; Set LFO
 	ld	a,22h
 	call	WriteFm1
@@ -2122,7 +2121,7 @@ TrackCmd_FmAmsFms:
 ; Set portamento speed
 ; -------------------------------------------------------------------------
 
-TrackCmd_PortamentoSpeed:             
+TrackCmd_PortamentoSpeed:
 	ld	(ix+zsnd.porta_speed),a				; Set portamento speed
 	ret
 
@@ -2138,7 +2137,7 @@ TrackCmd_Communication:
 ; Mute and stop FM track
 ; -------------------------------------------------------------------------
 
-TrackCmd_MuteStopFm:	        
+TrackCmd_MuteStopFm:
 	call	MuteFmTrack					; Mute track
 	jp	TrackCmd_Stop					; Stop track
 
@@ -2146,7 +2145,7 @@ TrackCmd_MuteStopFm:
 ; Set pan envelope
 ; -------------------------------------------------------------------------
 
-TrackCmd_FmPanEnvelope:	 
+TrackCmd_FmPanEnvelope:
 	push	ix						; Get pan envelope parameters
 	pop	hl
 	ld	bc,zsnd.fm_pan_env_type
@@ -2174,7 +2173,7 @@ TrackCmd_FmPwmVolume2:
 
 ; -------------------------------------------------------------------------
 
-TrackCmd_FmPwmVolume:	 
+TrackCmd_FmPwmVolume:
 	bit	PSG_TYPE,(ix+zsnd.type)				; Is this a PSG track?
 	ret	nz						; If so, exit
 	
@@ -2232,7 +2231,7 @@ SetFmVolume:
 ; Set legato
 ; -------------------------------------------------------------------------
 
-TrackCmd_Legato:	      
+TrackCmd_Legato:
 	set	LEGATO_FLAG,(ix+zsnd.flags)			; Set legato flag
 	dec	de
 	ret
@@ -2241,7 +2240,7 @@ TrackCmd_Legato:
 ; Set staccato
 ; -------------------------------------------------------------------------
 
-TrackCmd_Staccato:	    
+TrackCmd_Staccato:
 	call	MultiplyTempoDivider				; Set staccato
 	ld	(ix+zsnd.staccato_timer),a
 	ld	(ix+zsnd.staccato),a
@@ -2251,7 +2250,7 @@ TrackCmd_Staccato:
 ; Loop after counter reaches 0
 ; -------------------------------------------------------------------------
 
-TrackCmd_Loop0:	     
+TrackCmd_Loop0:
 	inc	de						; Get loop counter
 	add	a,zsnd.loop_counters
 	ld	c,a
@@ -2295,7 +2294,7 @@ TrackCmd_PsgVolume:
 ; Set FM track register
 ; -------------------------------------------------------------------------
 
-TrackCmd_FmTrackRegister:             
+TrackCmd_FmTrackRegister:
 	call	GetFmWriteParams				; Set FM register
 	rst	WriteFmTrack
 	ret
@@ -2304,7 +2303,7 @@ TrackCmd_FmTrackRegister:
 ; Set FM part 1 register
 ; -------------------------------------------------------------------------
 
-TrackCmd_Fm1Register:	 
+TrackCmd_Fm1Register:
 	call	GetFmWriteParams				; Set FM register
 	call	WriteFm1
 	ret
@@ -2394,7 +2393,7 @@ SkipFmInstrument:
 ; Set vibrato
 ; -------------------------------------------------------------------------
 
-TrackCmd_Vibrato:	     
+TrackCmd_Vibrato:
 	ld	(ix+zsnd.vibrato_params),e			; Set vibrato parameters address
 	ld	(ix+zsnd.vibrato_params+1),d
 	
@@ -2409,7 +2408,7 @@ TrackCmd_Vibrato:
 ; Choose vibrato envelope based on track type
 ; -------------------------------------------------------------------------
 
-TrackCmd_ChooseVibratoEnvelope:           
+TrackCmd_ChooseVibratoEnvelope:
 	inc	de						; Advance track data address
 	
 	bit	PSG_TYPE,(ix+zsnd.type)				; Is this a PSG track?
@@ -2542,7 +2541,7 @@ TrackCmd_Stop:
 ; Set PSG noise
 ; -------------------------------------------------------------------------
 
-TrackCmd_PsgNoise:	    
+TrackCmd_PsgNoise:
 	bit	FM_P2_TYPE,(ix+zsnd.type)			; Is this an FM part 2 track?
 	ret	nz						; If so, branch
 	
@@ -2593,7 +2592,7 @@ TrackCmd_Jump:
 ; Loop
 ; -------------------------------------------------------------------------
 
-TrackCmd_Loop:	        
+TrackCmd_Loop:
 	inc	de						; Get loop counter
 	add	a,zsnd.loop_counters
 	ld	c,a
@@ -2621,7 +2620,7 @@ TrackCmd_Loop:
 ; Call
 ; -------------------------------------------------------------------------
 
-TrackCmd_Call:	        
+TrackCmd_Call:
 	ld	c,a						; Get call address
 	inc	de
 	ld	a,(de)
@@ -2648,7 +2647,7 @@ TrackCmd_Call:
 ; Return
 ; -------------------------------------------------------------------------
 
-TrackCmd_Return:	      
+TrackCmd_Return:
 	push	ix						; Pop return address
 	pop	hl
 	ld	c,(ix+zsnd.call_stack_addr)
@@ -2674,7 +2673,7 @@ TrackCmd_TempoDivider:
 ; Add transposition
 ; -------------------------------------------------------------------------
 
-TrackCmd_Transpose:	   
+TrackCmd_Transpose:
 	add	a,(ix+zsnd.transpose)				; Add transposition
 	ld	(ix+zsnd.transpose),a
 	ret
@@ -2683,7 +2682,7 @@ TrackCmd_Transpose:
 ; Set portamento mode
 ; -------------------------------------------------------------------------
 
-TrackCmd_Portamento:	  
+TrackCmd_Portamento:
 	cp	1						; Is portamento being disabled?
 	jr	nz,.Disable					; If so, branch
 	
@@ -2717,7 +2716,7 @@ TrackCmd_RawFrequency:
 ; Set special FM3 mode
 ; -------------------------------------------------------------------------
 
-TrackCmd_SpecialFm3:	  
+TrackCmd_SpecialFm3:
 	ld	a,(ix+zsnd.type)				; Is this an FM3 track?
 	cp	FM3_TYPE
 	jr	nz,SkipSpecialFm3				; If not, branch
@@ -2777,7 +2776,7 @@ SkipSpecialFm3:
 ; -------------------------------------------------------------------------
 
 Fm3Detune:
-	dw	000h	  
+	dw	000h
 	dw	132h
 	dw	18Eh
 	dw	1E4h
@@ -2790,7 +2789,7 @@ Fm3Detune:
 ; Extended track command
 ; -------------------------------------------------------------------------
 
-TrackCmd_ExtendedCmd:	 
+TrackCmd_ExtendedCmd:
 	ld	hl,ExtendedTrackCmds				; Run extended command handler
 	rst	ReadPtrTable
 	inc	de
@@ -2801,7 +2800,7 @@ TrackCmd_ExtendedCmd:
 ; Set tempo
 ; -------------------------------------------------------------------------
 
-TrackCmd_Tempo:	       
+TrackCmd_Tempo:
 	ld	(z_music_tempo),a				; Set tempo
 	ld	(z_music_tempo_counter),a
 	ret
@@ -2810,7 +2809,7 @@ TrackCmd_Tempo:
 ; Play sound
 ; -------------------------------------------------------------------------
 
-TrackCmd_PlaySound:	   
+TrackCmd_PlaySound:
 	ld	(z_queued_sound),a				; Queue sound for playing
 	ret
 
@@ -2818,7 +2817,7 @@ TrackCmd_PlaySound:
 ; Pause music
 ; -------------------------------------------------------------------------
 
-TrackCmd_PauseMusic:	  
+TrackCmd_PauseMusic:
 	ld	(z_pause_command),a				; Set pause command
 	or	a
 	jr	z,.Unpause					; If we are unpausing, branch
@@ -2866,7 +2865,7 @@ TrackCmd_PauseMusic:
 ; Copy data
 ; -------------------------------------------------------------------------
 
-TrackCmd_CopyData:	    
+TrackCmd_CopyData:
 	ex	de,hl						; Get copy destination
 	ld	e,(hl)
 	inc	hl
@@ -2886,7 +2885,7 @@ TrackCmd_CopyData:
 ; Set tempo divider for all tracks
 ; -------------------------------------------------------------------------
 
-TrackCmd_TempoDividerAll:             
+TrackCmd_TempoDividerAll:
 	ld	b,MUSIC_TRACK_COUNT				; Music tracks
 	ld	hl,z_music_tracks+zsnd.tempo_divider
 
@@ -2903,7 +2902,7 @@ TrackCmd_TempoDividerAll:
 ; Set SSG-EG
 ; -------------------------------------------------------------------------
 
-TrackCmd_FmSsgEg:	     
+TrackCmd_FmSsgEg:
 	ld	(ix+zsnd.vol_env_id),80h			; Disable volume envelope
 	
 	ld	(ix+zsnd.fm_ssg_eg_values),e			; Set SSG-EG parameters address
@@ -2933,7 +2932,7 @@ SetFmSsgEgRegisters:
 ; Set FM volume envelope
 ; -------------------------------------------------------------------------
 
-TrackCmd_FmVolumeEnvelope:            
+TrackCmd_FmVolumeEnvelope:
 	ld	(ix+zsnd.vol_env_id),a				; Set volume envelope
 	inc	de
 	
