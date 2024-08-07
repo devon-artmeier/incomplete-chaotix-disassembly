@@ -1,5 +1,5 @@
 DoorIntoSummer_Header:
-	smpsHeaderStartSong 88
+	smpsHeaderStartSong 8
 	smpsHeaderVoice     DoorIntoSummer_Voices
 	smpsHeaderChan      $06, $03
 	smpsHeaderTempo     $01, $25

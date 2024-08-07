@@ -1,5 +1,5 @@
 Walkin_Header:
-	smpsHeaderStartSong 88
+	smpsHeaderStartSong 8
 	smpsHeaderVoice     Walkin_Voices
 	smpsHeaderChan      $06, $03
 	smpsHeaderTempo     $01, $35

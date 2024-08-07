@@ -1,5 +1,5 @@
 NewMoon_Header:
-	smpsHeaderStartSong 88
+	smpsHeaderStartSong 8
 	smpsHeaderVoice     NewMoon_Voices
 	smpsHeaderChan      $06, $03
 	smpsHeaderTempo     $01, $1C
